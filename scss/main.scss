@@ -1,0 +1,33 @@
+// proxima_novabold
+// proxima_novalight
+// proxima_novaregular
+// skolar_peregular
+
+// font: 400 16px 'Varela Round', sans-serif;
+
+@import "_reset";
+@import "_fonts";
+@import "_include-media";
+@import "_header";
+@import "_variables";
+@import "_mixins";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 1200px;
+  height: 1200px;
+  background: url(../img/bg_body.png) no-repeat;
+  color: $color-base;
+}
+.login {
+  margin: 50px;
+  width: 300px;
+  height: 388px;
+  @include main-block;
+  .button {
+    @include btn($bg-blue);
+    @include title-font;
+  }
+}

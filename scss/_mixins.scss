@@ -1,0 +1,19 @@
+@mixin btn($bg) {
+  width: 100%;
+  height: 60px;
+  background: $bg;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: $btn-radius;
+  text-decoration: none;
+}
+
+@mixin title-font {
+  font: 20px "proxima_novabold";
+  text-transform: uppercase;
+}
+
+@mixin main-block {
+  background: $bg-white_transp;
+  border-radius: $btn-radius;
+}
