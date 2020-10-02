@@ -194,7 +194,7 @@ header {
 
 body {
   background: url(../img/bg_body.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
   color: #fff; }
 
 .container_01 {
