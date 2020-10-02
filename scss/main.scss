@@ -7,6 +7,7 @@
 
 @import "_reset";
 @import "_fonts";
+@import "_style";
 @import "_include-media";
 @import "_header";
 @import "_variables";
@@ -16,18 +17,278 @@
   box-sizing: border-box;
 }
 body {
-  width: 1200px;
-  height: 1200px;
   background: url(../img/bg_body.png) no-repeat;
+  background-size: 100%;
   color: $color-base;
 }
-.login {
+.container_01 {
   margin: 50px;
+  width: 658px;
+  height: 515px;
+  display: flex;
+  justify-content: space-between;
+}
+.container_02 {
+  width: 658px;
+  height: 515px;
+  margin-left: 50px;
+}
+.button_wrap_01 {
   width: 300px;
-  height: 388px;
-  @include main-block;
-  .button {
+  .login {
+    position: relative;
+    height: 388px;
+    @include main-block;
+    .button {
+      @include btn($bg-blue);
+      @include title-font;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+      margin-bottom: 30px;
+    }
+    .social {
+      position: absolute;
+      bottom: 0;
+      @include btn($bg-white);
+      border-top-left-radius: 0%;
+      border-top-right-radius: 0%;
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        li {
+          float: left;
+          a {
+            font-size: 23px;
+            text-decoration: none;
+            color: #fff;
+            padding: 7px;
+          }
+        }
+      }
+    }
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    label {
+      font: 16px "proxima_novaregular";
+    }
+    input[type="email"],
+    input[type="password"] {
+      display: block;
+      width: 250px;
+      height: 60px;
+      background: $bg-white;
+      border-radius: $btn-radius;
+      outline: none;
+      font: inherit;
+      color: #fff;
+      border: none;
+    }
+    input[type="email"]::placeholder {
+      color: inherit;
+    }
+  }
+  .row {
+    input[type="password"] {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+  .row_button {
+    margin-top: 10px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: inline-block;
+      width: 105px;
+      height: 1px;
+      background: $bg-white;
+    }
+    input[type="submit"] {
+      background: transparent;
+      border: none;
+      outline: none;
+      font: 14px "skolar_peregular";
+      color: #fff;
+    }
+  }
+}
+.button_wrap_02 {
+  width: 300px;
+  .profile {
+    height: 425px;
+    @include main-block;
+    .button {
+      @include btn($bg-brown);
+      @include title-font;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+    }
+    .prof_logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 149px;
+      background: url(../img/profile_bg.png) no-repeat;
+      background-size: 100%;
+      .avatar {
+        margin-right: 10px;
+        img {
+          border: 4px solid #bfb2ae;
+          border-radius: 50%;
+        }
+      }
+      .profile_info_01 {
+        strong {
+          display: block;
+          font: 20px "proxima_novabold";
+        }
+        span {
+          font: 16px "proxima_novaregular";
+        }
+      }
+    }
+    .follow_info {
+      height: 122px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .following {
+        span {
+          font: 16px "proxima_novaregular";
+        }
+        p {
+          font: 30px "proxima_novalight";
+        }
+      }
+      .border {
+        height: 78px;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .followers {
+        span {
+          font: 16px "proxima_novaregular";
+        }
+        p {
+          font: 30px "proxima_novalight";
+        }
+      }
+    }
+    .row {
+      width: 250px;
+      margin: auto;
+      input[type="button"] {
+        @include btn($bg-white);
+        @include title-font;
+        color: #fff;
+        padding: 0;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+.button_wrap_03 {
+  width: 300px;
+  float: left;
+  .download {
+    height: 388px;
+    @include main-block;
+    .button {
+      @include btn($bg-green);
+      @include title-font;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+    }
+    .progress_wrap {
+      img {
+        display: block;
+        width: 50%;
+        margin: 40px auto;
+      }
+      span {
+        display: block;
+        text-align: center;
+        font: 30px "proxima_novalight";
+      }
+      p {
+        text-align: center;
+        font: 16px "proxima_novaregular";
+      }
+    }
+  }
+}
+.button_wrap_04 {
+  width: 300px;
+  float: right;
+  .location {
+    height: 145px;
+    @include main-block;
+    .button {
+      @include btn($bg-beige);
+      @include title-font;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+    }
+    .loc_info {
+      height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .icon-location {
+        color: $bg-white_transp;
+        span {
+          margin-left: 8px;
+          font: 16px "proxima_novaregular";
+          color: #fff;
+        }
+      }
+      .border {
+        height: 78px;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .icon-checkbox-checked {
+        color: $bg-white_transp;
+      }
+    }
+  }
+}
+.button_wrap_05 {
+  width: 250px;
+  float: right;
+  .button_01 {
+    margin-top: 20px;
+    margin-left: -25px;
+    margin-bottom: 10px;
+    height: 60px;
+    @include btn($bg-white);
+    @include title-font;
+  }
+  .button_02 {
+    margin-left: -25px;
+    margin-bottom: 10px;
+    height: 60px;
     @include btn($bg-blue);
+    @include title-font;
+  }
+  .button_03 {
+    margin-left: -25px;
+    margin-bottom: 10px;
+    height: 60px;
+    @include btn($bg-light-blue);
+    @include title-font;
+  }
+  .button_04 {
+    margin-left: -25px;
+    margin-bottom: 10px;
+    height: 60px;
+    @include btn($bg-green);
     @include title-font;
   }
 }
